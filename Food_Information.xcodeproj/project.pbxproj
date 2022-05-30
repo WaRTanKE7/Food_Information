@@ -7,15 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4357AEAF28449C23005E7944 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4357AEAE28449C23005E7944 /* Color.xcassets */; };
+		4357AEB128449D1C005E7944 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4357AEB028449D1C005E7944 /* TabBar.swift */; };
+		4384A0442844650C008BAB9F /* MaterialEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4384A0432844650C008BAB9F /* MaterialEffect.swift */; };
+		4384A04728446A08008BAB9F /* BottomCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4384A04628446A08008BAB9F /* BottomCurve.swift */; };
 		43B4521E283C990400A37758 /* Food_InformationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B4521D283C990400A37758 /* Food_InformationApp.swift */; };
 		43B45220283C990400A37758 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B4521F283C990400A37758 /* ContentView.swift */; };
 		43B45222283C990800A37758 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43B45221283C990800A37758 /* Assets.xcassets */; };
 		43B45225283C990800A37758 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43B45224283C990800A37758 /* Preview Assets.xcassets */; };
 		43B45227283C990800A37758 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B45226283C990800A37758 /* Persistence.swift */; };
 		43B4522A283C990800A37758 /* Food_Information.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 43B45228283C990800A37758 /* Food_Information.xcdatamodeld */; };
+		43B45234283C9B1500A37758 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B45233283C9B1500A37758 /* Home.swift */; };
+		43C94059283CA15C00DD047B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C94058283CA15C00DD047B /* AppDelegate.swift */; };
+		43C9405C283CA2CB00DD047B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C9405B283CA2CB00DD047B /* NetworkManager.swift */; };
+		43C9405E283CAAD600DD047B /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C9405D283CAAD600DD047B /* HomeVM.swift */; };
+		43C94060283CCBF700DD047B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C9405F283CCBF700DD047B /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4357AEAE28449C23005E7944 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		4357AEB028449D1C005E7944 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		4384A0432844650C008BAB9F /* MaterialEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialEffect.swift; sourceTree = "<group>"; };
+		4384A04628446A08008BAB9F /* BottomCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCurve.swift; sourceTree = "<group>"; };
 		43B4521A283C990400A37758 /* Food_Information.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Food_Information.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B4521D283C990400A37758 /* Food_InformationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food_InformationApp.swift; sourceTree = "<group>"; };
 		43B4521F283C990400A37758 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -23,6 +36,12 @@
 		43B45224283C990800A37758 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		43B45226283C990800A37758 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		43B45229283C990800A37758 /* Food_Information.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Food_Information.xcdatamodel; sourceTree = "<group>"; };
+		43B45233283C9B1500A37758 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		43C94058283CA15C00DD047B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		43C9405B283CA2CB00DD047B /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		43C9405D283CAAD600DD047B /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		43C9405F283CCBF700DD047B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		43C94061283CCE6600DD047B /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,17 +49,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43C94060283CCBF700DD047B /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4357AEB228449EF9005E7944 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				43B45233283C9B1500A37758 /* Home.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		4384A045284469F3008BAB9F /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				4384A0432844650C008BAB9F /* MaterialEffect.swift */,
+				4384A04628446A08008BAB9F /* BottomCurve.swift */,
+				4357AEB028449D1C005E7944 /* TabBar.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		43B45211283C990400A37758 = {
 			isa = PBXGroup;
 			children = (
 				43B4521C283C990400A37758 /* Food_Information */,
 				43B4521B283C990400A37758 /* Products */,
+				4D9CDD33120ED4E17D2E1FCA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,11 +94,18 @@
 		43B4521C283C990400A37758 /* Food_Information */ = {
 			isa = PBXGroup;
 			children = (
+				43C9405A283CA29400DD047B /* NetworkManager */,
+				43B45232283C9A8600A37758 /* Model */,
+				43B45231283C9A7F00A37758 /* ViewModel */,
+				43B45230283C9A7A00A37758 /* View */,
+				43C94058283CA15C00DD047B /* AppDelegate.swift */,
 				43B4521D283C990400A37758 /* Food_InformationApp.swift */,
 				43B4521F283C990400A37758 /* ContentView.swift */,
-				43B45221283C990800A37758 /* Assets.xcassets */,
 				43B45226283C990800A37758 /* Persistence.swift */,
+				43B45221283C990800A37758 /* Assets.xcassets */,
+				4357AEAE28449C23005E7944 /* Color.xcassets */,
 				43B45228283C990800A37758 /* Food_Information.xcdatamodeld */,
+				43C94061283CCE6600DD047B /* info.plist */,
 				43B45223283C990800A37758 /* Preview Content */,
 			);
 			path = Food_Information;
@@ -71,6 +117,46 @@
 				43B45224283C990800A37758 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		43B45230283C9A7A00A37758 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4357AEB228449EF9005E7944 /* Home */,
+				4384A045284469F3008BAB9F /* TabBar */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		43B45231283C9A7F00A37758 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				43C9405D283CAAD600DD047B /* HomeVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		43B45232283C9A8600A37758 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		43C9405A283CA29400DD047B /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				43C9405B283CA2CB00DD047B /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		4D9CDD33120ED4E17D2E1FCA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43C9405F283CCBF700DD047B /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +219,7 @@
 			files = (
 				43B45225283C990800A37758 /* Preview Assets.xcassets in Resources */,
 				43B45222283C990800A37758 /* Assets.xcassets in Resources */,
+				4357AEAF28449C23005E7944 /* Color.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,9 +230,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43C94059283CA15C00DD047B /* AppDelegate.swift in Sources */,
 				43B45227283C990800A37758 /* Persistence.swift in Sources */,
+				4384A04728446A08008BAB9F /* BottomCurve.swift in Sources */,
 				43B45220283C990400A37758 /* ContentView.swift in Sources */,
+				43C9405E283CAAD600DD047B /* HomeVM.swift in Sources */,
+				43C9405C283CA2CB00DD047B /* NetworkManager.swift in Sources */,
+				43B45234283C9B1500A37758 /* Home.swift in Sources */,
 				43B4522A283C990800A37758 /* Food_Information.xcdatamodeld in Sources */,
+				4357AEB128449D1C005E7944 /* TabBar.swift in Sources */,
+				4384A0442844650C008BAB9F /* MaterialEffect.swift in Sources */,
 				43B4521E283C990400A37758 /* Food_InformationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,7 +371,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Food_Information/Preview Content\"";
 				DEVELOPMENT_TEAM = Z9F552GN7J;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = /Users/wartank/Desktop/Project/Food_Information/Food_Information/info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -306,7 +401,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Food_Information/Preview Content\"";
 				DEVELOPMENT_TEAM = Z9F552GN7J;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = /Users/wartank/Desktop/Project/Food_Information/Food_Information/info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
