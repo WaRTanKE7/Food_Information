@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4357AEAF28449C23005E7944 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4357AEAE28449C23005E7944 /* Color.xcassets */; };
 		4357AEB128449D1C005E7944 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4357AEB028449D1C005E7944 /* TabBar.swift */; };
+		436FFFEF2844B634008011BD /* Stars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FFFEE2844B634008011BD /* Stars.swift */; };
+		436FFFF12845DFF1008011BD /* TabBarVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FFFF02845DFF0008011BD /* TabBarVM.swift */; };
 		4384A0442844650C008BAB9F /* MaterialEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4384A0432844650C008BAB9F /* MaterialEffect.swift */; };
 		4384A04728446A08008BAB9F /* BottomCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4384A04628446A08008BAB9F /* BottomCurve.swift */; };
 		43B4521E283C990400A37758 /* Food_InformationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B4521D283C990400A37758 /* Food_InformationApp.swift */; };
@@ -27,6 +29,8 @@
 /* Begin PBXFileReference section */
 		4357AEAE28449C23005E7944 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		4357AEB028449D1C005E7944 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		436FFFEE2844B634008011BD /* Stars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stars.swift; sourceTree = "<group>"; };
+		436FFFF02845DFF0008011BD /* TabBarVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVM.swift; sourceTree = "<group>"; };
 		4384A0432844650C008BAB9F /* MaterialEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialEffect.swift; sourceTree = "<group>"; };
 		4384A04628446A08008BAB9F /* BottomCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCurve.swift; sourceTree = "<group>"; };
 		43B4521A283C990400A37758 /* Food_Information.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Food_Information.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				43B45233283C9B1500A37758 /* Home.swift */,
+				436FFFEE2844B634008011BD /* Stars.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				43C9405D283CAAD600DD047B /* HomeVM.swift */,
+				436FFFF02845DFF0008011BD /* TabBarVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -237,10 +243,12 @@
 				43C9405E283CAAD600DD047B /* HomeVM.swift in Sources */,
 				43C9405C283CA2CB00DD047B /* NetworkManager.swift in Sources */,
 				43B45234283C9B1500A37758 /* Home.swift in Sources */,
+				436FFFEF2844B634008011BD /* Stars.swift in Sources */,
 				43B4522A283C990800A37758 /* Food_Information.xcdatamodeld in Sources */,
 				4357AEB128449D1C005E7944 /* TabBar.swift in Sources */,
 				4384A0442844650C008BAB9F /* MaterialEffect.swift in Sources */,
 				43B4521E283C990400A37758 /* Food_InformationApp.swift in Sources */,
+				436FFFF12845DFF1008011BD /* TabBarVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

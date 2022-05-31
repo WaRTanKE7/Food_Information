@@ -15,6 +15,8 @@ enum Tab: String, CaseIterable {
 }
 
 struct TabBar: View {
+    @StateObject var tabBarVM: TabBarVM = .init()
+    
     init() {
         UITabBar.appearance().isHidden = true
     }
@@ -29,22 +31,22 @@ struct TabBar: View {
         TabView(selection: $currentTab) {
             Text("搜尋")
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color("BG").ignoresSafeArea())
+                .background(Color.white.ignoresSafeArea())
                 .tag(Tab.Search)
             
             Home().body
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color("BG").ignoresSafeArea())
+                .background(Color.white.ignoresSafeArea())
                 .tag(Tab.Home)
             
             Text("我的收藏")
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color("BG").ignoresSafeArea())
+                .background(Color.white.ignoresSafeArea())
                 .tag(Tab.Favorite)
             
             Text("個人")
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color("BG").ignoresSafeArea())
+                .background(Color.white.ignoresSafeArea())
                 .tag(Tab.Acount)
         }
         .overlay(
@@ -54,16 +56,33 @@ struct TabBar: View {
                 }
             }
             .padding(.vertical)
-            // Preview wont show safeArea
+            // 全螢幕手機 SafeArea Bottom != 0 要減少，以免 TabBar 使用太多空間
             .padding(.bottom, getSafeArea().bottom == 0 ? 10 : (getSafeArea().bottom - 10))
             .background(
-                MaterialEffect(style: .systemUltraThinMaterialDark)
+                MaterialEffect(style: .systemUltraThinMaterialLight)
                     .clipShape(BottomCurve(currentXValue: currentXValue))
             )
             ,alignment: .bottom
         )
         .ignoresSafeArea(.all, edges: .bottom)
-        .preferredColorScheme(.dark) // Always light
+        .preferredColorScheme(.light) // Always light
+        .onAppear {
+            tabBarVM.checkLocationAuthorization()
+        }
+        .alert("GPS 定位權限", isPresented: $tabBarVM.noLocationAuthorization) {
+            Button {
+                if let url = URL(string: UIApplication.openSettingsURLString) {
+                    if UIApplication.shared.canOpenURL(url) {
+                        UIApplication.shared.open(url)
+                    }
+                }
+            } label: {
+                Text("OK")
+            }
+
+        } message: {
+            Text("GPS 權限不足，請至設定內更改權限\n 路徑：隱私權 -> 定位服務 -> Food_Information")
+        }
     }
     
     // MARK: TabButton
@@ -73,7 +92,6 @@ struct TabBar: View {
             Button {
                 withAnimation(.spring()) {
                     currentTab = tab
-                    print(proxy.frame(in: .global).midX)
                     currentXValue = proxy.frame(in: .global).midX
                 }
             } label: {
@@ -82,12 +100,12 @@ struct TabBar: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 25, height: 25)
                     .frame(maxWidth: .infinity)
-                    .foregroundColor(.white)
+                    .foregroundColor(currentTab == tab ? .white : .black)
                     .padding(currentTab == tab ? 15 : 0)
                     .background(
                         ZStack {
                             if currentTab == tab {
-                                MaterialEffect(style: .systemChromeMaterialDark)
+                                MaterialEffect(style: .systemUltraThinMaterialDark)
                                     .clipShape(Circle())
                                     .matchedGeometryEffect(id: "TAB", in: animation)
                             }
@@ -97,7 +115,6 @@ struct TabBar: View {
                     .offset(y: currentTab == tab ? -50 : 0)
             }
             .onAppear {
-                print(proxy.frame(in: .global).midX)
                 if tab == .Home && currentXValue == 0 {
                     currentXValue = proxy.frame(in: .global).midX
                 }
