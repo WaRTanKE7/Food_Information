@@ -15,14 +15,14 @@ enum Tab: String, CaseIterable {
 }
 
 struct TabBar: View {
-    @StateObject var tabBarVM: TabBarVM = .init()
-    
     init() {
         UITabBar.appearance().isHidden = true
     }
     
     @State var currentTab: Tab = .Home
     @State private var currentXValue: CGFloat = 0
+    
+    @StateObject private var locationManager = LocationManager()
     
     @Namespace var animation
     
@@ -34,7 +34,7 @@ struct TabBar: View {
                 .background(Color.gray.opacity(0.1).ignoresSafeArea())
                 .tag(Tab.Search)
             
-            Home().body
+            Home(location: $locationManager.location).body
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color.gray.opacity(0.1).ignoresSafeArea())
                 .tag(Tab.Home)
@@ -74,21 +74,7 @@ struct TabBar: View {
         .ignoresSafeArea(.all, edges: .bottom)
         .preferredColorScheme(.light) // Always light
         .onAppear {
-            tabBarVM.checkLocationAuthorization()
-        }
-        .alert("GPS 定位權限", isPresented: $tabBarVM.noLocationAuthorization) {
-            Button {
-                if let url = URL(string: UIApplication.openSettingsURLString) {
-                    if UIApplication.shared.canOpenURL(url) {
-                        UIApplication.shared.open(url)
-                    }
-                }
-            } label: {
-                Text("OK")
-            }
-
-        } message: {
-            Text("GPS 權限不足，請至設定內更改權限\n 路徑：隱私權 -> 定位服務 -> Food_Information")
+            locationManager.checkIfLocationServicesIsEnable()
         }
     }
     

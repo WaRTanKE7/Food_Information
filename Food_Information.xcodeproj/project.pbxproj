@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4357AEAF28449C23005E7944 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4357AEAE28449C23005E7944 /* Color.xcassets */; };
 		4357AEB128449D1C005E7944 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4357AEB028449D1C005E7944 /* TabBar.swift */; };
+		4359CEA828503AB0001626D5 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4359CEA728503AB0001626D5 /* LocationManager.swift */; };
 		436FFFEF2844B634008011BD /* Stars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FFFEE2844B634008011BD /* Stars.swift */; };
 		436FFFF12845DFF1008011BD /* TabBarVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FFFF02845DFF0008011BD /* TabBarVM.swift */; };
 		4384A0442844650C008BAB9F /* MaterialEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4384A0432844650C008BAB9F /* MaterialEffect.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		4357AEAE28449C23005E7944 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		4357AEB028449D1C005E7944 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		4359CEA728503AB0001626D5 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		436FFFEE2844B634008011BD /* Stars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stars.swift; sourceTree = "<group>"; };
 		436FFFF02845DFF0008011BD /* TabBarVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVM.swift; sourceTree = "<group>"; };
 		4384A0432844650C008BAB9F /* MaterialEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialEffect.swift; sourceTree = "<group>"; };
@@ -99,7 +101,7 @@
 		43B4521C283C990400A37758 /* Food_Information */ = {
 			isa = PBXGroup;
 			children = (
-				43C9405A283CA29400DD047B /* NetworkManager */,
+				43C9405A283CA29400DD047B /* Manager */,
 				43B45232283C9A8600A37758 /* Model */,
 				43B45231283C9A7F00A37758 /* ViewModel */,
 				43B45230283C9A7A00A37758 /* View */,
@@ -149,12 +151,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		43C9405A283CA29400DD047B /* NetworkManager */ = {
+		43C9405A283CA29400DD047B /* Manager */ = {
 			isa = PBXGroup;
 			children = (
 				43C9405B283CA2CB00DD047B /* NetworkManager.swift */,
+				4359CEA728503AB0001626D5 /* LocationManager.swift */,
 			);
-			path = NetworkManager;
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		4D9CDD33120ED4E17D2E1FCA /* Frameworks */ = {
@@ -246,6 +249,7 @@
 				436FFFEF2844B634008011BD /* Stars.swift in Sources */,
 				43B4522A283C990800A37758 /* Food_Information.xcdatamodeld in Sources */,
 				4357AEB128449D1C005E7944 /* TabBar.swift in Sources */,
+				4359CEA828503AB0001626D5 /* LocationManager.swift in Sources */,
 				4384A0442844650C008BAB9F /* MaterialEffect.swift in Sources */,
 				43B4521E283C990400A37758 /* Food_InformationApp.swift in Sources */,
 				436FFFF12845DFF1008011BD /* TabBarVM.swift in Sources */,

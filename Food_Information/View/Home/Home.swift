@@ -6,16 +6,19 @@
 //
 
 import SwiftUI
-
-
+import CoreLocation
 
 struct Home: View {
     @StateObject var homeVM: HomeVM = .init()
     
-    init() {
+    @Binding var location: CLLocationCoordinate2D
+    
+    init(location: Binding<CLLocationCoordinate2D>) {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.black]
         
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.black]
+        
+        self._location = location
     }
     
     var body: some View {
@@ -27,15 +30,19 @@ struct Home: View {
                     }
                 }
                 .padding()
+                
             }
             .navigationTitle("附近餐廳")
             .navigationBarTitleDisplayMode(.automatic)
         }
+        .navigationViewStyle(.stack)
     }
     
     @ViewBuilder
     func card() -> some View {
         VStack(spacing: 5) {
+            Text("經緯度：\(location.longitude), \(location.latitude)")
+            
             Image(systemName: "photo.fill")
                 .resizable()
                 .scaledToFit()
@@ -111,7 +118,9 @@ struct Home: View {
 }
 
 struct Home_Previews: PreviewProvider {
+    @State static var location = CLLocationCoordinate2D(latitude: 121.5234778325681, longitude: 25.04432575514154)
+    
     static var previews: some View {
-        Home()
+        Home(location: $location)
     }
 }

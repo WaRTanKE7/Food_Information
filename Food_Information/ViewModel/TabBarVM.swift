@@ -6,31 +6,11 @@
 //
 
 import SwiftUI
-import CoreLocation
 
 class TabBarVM: ObservableObject {
-    @Published var noLocationAuthorization: Bool = false
+//    let locationManager = CLLocationManager()
     
-    let locationManager = CLLocationManager()
-    
-    func checkLocationAuthorization() {
-        switch locationManager.authorizationStatus {
-        case .notDetermined:
-            locationManager.requestWhenInUseAuthorization()
-            locationManager.startUpdatingLocation()
-            noLocationAuthorization = false
-        case .restricted, .denied:
-            noLocationAuthorization = true
-        default:
-            noLocationAuthorization = false
-        }
-    }
-    
-    func getCurrentLocation() {
-        
-    }
-    
-    func searchNearbyPlace(withKeyword keyword: String) {
-        
-    }
+    // 預設地點：台北
+//    @Published var longitude: String = "25.04432575514154"
+//    @Published var latitude: String = "121.5234778325681"
 }
